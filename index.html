@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mavi · produção</title>
+<meta name="description" content="mavi: produção executiva, montagem e eventos, direção e produção criativa, estratégia de marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4efe6;
+    --ink: #1d1a17;
+    --muted: #6b635a;
+    --accent: #2f5bd3;
+    --line: rgba(29, 26, 23, 0.14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161412;
+      --ink: #f2ece2;
+      --muted: #a39a8f;
+      --accent: #7d9cff;
+      --line: rgba(242, 236, 226, 0.16);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 32px 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 0;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(88px, 22vw, 240px);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+  h1 span { color: var(--accent); }
+  .services {
+    list-style: none;
+    margin-top: 36px;
+    max-width: 720px;
+    border-top: 1px solid var(--line);
+  }
+  .services li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .services span {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(20px, 3vw, 26px);
+    line-height: 1.2;
+  }
+  .services em {
+    font-style: normal;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .contact {
+    margin-top: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .btn:hover { background: var(--accent); transform: translateY(-2px); }
+  .btn svg { width: 16px; height: 16px; }
+  .note { font-size: 14px; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 20px; }
+  @media (max-width: 520px) {
+    header, footer { font-size: 11px; }
+    footer { flex-direction: column; gap: 6px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div><span class="dot"></span>Site em construção · Coming soon</div>
+    <div>Maceió, BR</div>
+  </header>
+
+  <main>
+    <h1>mavi<span>.</span></h1>
+    <ul class="services">
+      <li><span>Produção executiva</span><em>Executive production</em></li>
+      <li><span>Montagem e eventos</span><em>Event setup &amp; production</em></li>
+      <li><span>Direção e produção criativa</span><em>Creative direction &amp; production</em></li>
+      <li><span>Estratégia de marketing</span><em>Marketing strategy</em></li>
+    </ul>
+    <div class="contact">
+      <a class="btn" href="mailto:mavi@itsmavi.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        mavi@itsmavi.com
+      </a>
+      <span class="note">Vamos conversar · Let's talk</span>
+    </div>
+  </main>
+
+  <footer>
+    <div>© <span id="y">2026</span> mavi</div>
+    <div>itsmavi.com</div>
+  </footer>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
